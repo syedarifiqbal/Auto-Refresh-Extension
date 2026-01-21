@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Internal planning documents (not for public repo)
+phased.txt
+implementation-plan.txt
+*.internal.txt
+*.private.txt
+NOTES.md
+TODO.md
+.ai-instructions
+
+# Environment files
+.env
+.env.local

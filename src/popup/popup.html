@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Auto Refresh</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Auto Refresh</h1>
+      <span id="status" class="status status-inactive">Inactive</span>
+    </header>
+
+    <main class="main">
+      <div class="current-site">
+        <span class="label">Current site:</span>
+        <span id="currentDomain" class="domain">—</span>
+      </div>
+
+      <div class="controls">
+        <div class="control-group">
+          <label for="minInterval">Min interval</label>
+          <div class="slider-container">
+            <input type="range" id="minInterval" min="5" max="300" value="30">
+            <span id="minValue" class="value">30s</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label for="maxInterval">Max interval</label>
+          <div class="slider-container">
+            <input type="range" id="maxInterval" min="10" max="600" value="120">
+            <span id="maxValue" class="value">2m 0s</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="toggleBtn" class="btn btn-primary">Enable for this site</button>
+      </div>
+
+      <div class="info">
+        <p id="nextRefresh" class="info-text">Next refresh: —</p>
+        <p id="lastRefresh" class="info-text">Last refresh: —</p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <button id="pauseBtn" class="btn btn-secondary">Pause All</button>
+    </footer>
+  </div>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

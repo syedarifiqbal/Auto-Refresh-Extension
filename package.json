@@ -1,0 +1,17 @@
+{
+  "name": "dashboard-auto-refresh",
+  "version": "1.0.0",
+  "description": "Chrome extension to auto-refresh pages at random intervals",
+  "scripts": {
+    "build": "tsc && npm run copy-static",
+    "copy-static": "cp manifest.json dist/ && cp src/popup/popup.html src/popup/popup.css dist/popup/ && cp -r src/icons dist/",
+    "watch": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "typescript": "^5.4.5"
+  },
+  "author": "Syed Arif Iqbal <arifiqbal@outlook.com>",
+  "license": "MIT"
+}
